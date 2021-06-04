@@ -1,0 +1,50 @@
+{
+    "$id": "http://example.com/usuario.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "Um utilizador da aplicação, que possui permissões e credenciais de acesso.",
+    "examples": [
+        {
+            "id": 1,
+            "nome": "Vinícius Menezes",
+            "email": "vini@nmail.com",
+            "tipoUsuario": "Administrador"
+        }
+    ],
+    "required": [
+        "nome",
+        "email",
+        "tipoUsuario"
+    ],
+    "title": "Usuário",
+    "type": "object",
+    "properties": {
+        "id": {
+            "$id": "usuario#/properties/id",
+            "description": "Um identificador inequívoco que o sistema usa para marcar um usuário.",
+            "examples": [
+                1
+            ],
+            "title": "ID de Usuário",
+            "type": "integer"
+        },
+        "nome": {
+            "$id": "usuario#/properties/nome",
+            "description": "Nome completo do usuário da aplicação.",
+            "examples": [
+                "Vinícius Menezes"
+            ],
+            "title": "Nome do Usuário",
+            "type": "string"
+        },
+        "email": {
+            "$id": "usuario#/properties/email",
+            "description": "Endereço de e-mail do usuário.",
+            "examples": [
+                "vini@nmail.com"
+            ],
+            "title": "E-mail do usuário",
+            "type": "string"
+        }
+    },
+    "additionalProperties": true
+}
